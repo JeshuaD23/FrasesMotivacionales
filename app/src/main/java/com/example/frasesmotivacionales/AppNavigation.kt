@@ -27,8 +27,6 @@ fun AppNavigation() {
     AnimatedContent(
         targetState = currentScreen,
         transitionSpec = {
-            // Primero sale la pantalla actual (Fade Out)
-            // y después entra la nueva (Fade In)
             fadeIn(tween(duration, delayMillis = duration)) togetherWith
                     fadeOut(tween(duration))
         },

@@ -49,7 +49,6 @@ fun PhraseScreen(
     var phraseVisible by remember { mutableStateOf(false) }
     var changing by remember { mutableStateOf(false) }
 
-    // Al abrir la pantalla, la frase aparece con Fade In
     LaunchedEffect(Unit) {
         delay(600)
         phraseVisible = true
@@ -81,7 +80,6 @@ fun PhraseScreen(
 
         Spacer(Modifier.height(32.dp))
 
-        // Frase motivacional: Fade In / Fade Out
         AnimatedVisibility(
             visible = phraseVisible,
             enter = fadeIn(tween(duration)),

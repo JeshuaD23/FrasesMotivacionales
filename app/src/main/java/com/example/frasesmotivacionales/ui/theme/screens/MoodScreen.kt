@@ -60,7 +60,6 @@ fun MoodScreen(onSeePhrase: (Mood) -> Unit) {
 
         Spacer(Modifier.height(16.dp))
 
-        // Los estados de ánimo aparecen uno tras otro con Fade In
         Mood.entries.forEachIndexed { index, mood ->
             FadeIn(delayMillis = 400 + index * 250) {
                 val isSelected = selected == mood
@@ -89,7 +88,6 @@ fun MoodScreen(onSeePhrase: (Mood) -> Unit) {
 
         Spacer(Modifier.height(12.dp))
 
-        // La descripción cambia con Fade Out / Fade In
         AnimatedContent(
             targetState = selected,
             transitionSpec = {

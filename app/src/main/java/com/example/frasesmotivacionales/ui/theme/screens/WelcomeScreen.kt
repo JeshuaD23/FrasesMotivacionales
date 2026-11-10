@@ -33,7 +33,6 @@ fun WelcomeScreen(onStart: () -> Unit) {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        // Logo + nombre
         FadeIn(delayMillis = 0) {
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
                 Box(
@@ -55,7 +54,6 @@ fun WelcomeScreen(onStart: () -> Unit) {
 
         Spacer(Modifier.height(32.dp))
 
-        // Frase de bienvenida
         FadeIn(delayMillis = 800) {
             Text(
                 "¿Cómo te sientes hoy?",
@@ -77,7 +75,6 @@ fun WelcomeScreen(onStart: () -> Unit) {
 
         Spacer(Modifier.height(40.dp))
 
-        // El botón aparece después de los textos
         FadeIn(delayMillis = 2400) {
             Button(
                 onClick = onStart,
